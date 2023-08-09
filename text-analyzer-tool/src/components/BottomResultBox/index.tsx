@@ -1,14 +1,18 @@
 import './index.scss'
 
-const BottomResultBox = () => {
+type BottomResultBoxProps = {
+  avg: string
+  longest: string
+}
+const BottomResultBox = ({ avg, longest }: BottomResultBoxProps) => {
   const bottomResultBar = [
     {
       title: 'Average Reading Time:',
-      value: '-',
+      value: avg,
     },
     {
       title: 'Longest word:',
-      value: '-',
+      value: longest,
     },
   ]
 

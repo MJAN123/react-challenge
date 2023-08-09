@@ -1,26 +1,36 @@
+import { text } from 'stream/consumers'
 import './index.scss'
 
-const ResultBox = () => {
+type ResultBoxProps = {
+  textInfo: {
+    words: number
+    char: number
+    sen: number
+    para: number
+    pron: number
+  }
+}
+const ResultBox = ({ textInfo }: ResultBoxProps) => {
   const resultBar = [
     {
       title: 'Words',
-      value: 0,
+      value: textInfo.words,
     },
     {
       title: 'Characters',
-      value: 0,
+      value: textInfo.char,
     },
     {
       title: 'Sentences',
-      value: 0,
+      value: textInfo.sen,
     },
     {
       title: 'Paragraphs ',
-      value: 0,
+      value: textInfo.para,
     },
     {
       title: 'Pronouns',
-      value: 0,
+      value: textInfo.pron,
     },
   ]
 
